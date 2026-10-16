@@ -9,6 +9,8 @@ A terminal UI (TUI) that helps upload and download files while interacting with 
 - **Model selection** — choose from every model available to your account.
 - **File context uploads** — optionally attach files from the current directory to your question. Hidden files and the `kagi-downloads/` directory are skipped, and `.gitignore` / `.agentignore` rules (including `*` globs) are honored.
 
+![Demo](demo.gif)
+
 ## Requirements
 
 - A Kagi account with Assistant access
