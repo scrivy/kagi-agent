@@ -1,8 +1,8 @@
-# kagi-agent (alpha!)
+# kagi-agent
 
 A terminal UI (TUI) that helps upload and download files while interacting with the [Kagi Assistant](https://assistant.kagi.com).
 
-`kagi-agent` brings the Kagi Assistant into your terminal: optionally upload files from your current directory as context, chat with a model, and download the files from the response.
+`kagi-agent` brings the Kagi Assistant into your terminal: optionally upload files from your current directory as context, chat with a model, and watch as it downloads the files from the response into kagi-downloads.
 
 ## Features
 
