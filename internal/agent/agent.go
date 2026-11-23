@@ -228,7 +228,7 @@ func (a *Agent) Run() error {
 					for _, filePath := range a.state.filePathsInCwd {
 						resp, err := a.client.PostUpload(ctx, filePath)
 						if err != nil {
-							return fmt.Errorf("a.client.PostUpload(%s): %w", err)
+							return fmt.Errorf("a.client.PostUpload(): %w", err)
 						}
 
 						a.output(fmt.Sprintf("\tuploaded: %s\n", filePath))

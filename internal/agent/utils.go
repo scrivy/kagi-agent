@@ -470,6 +470,11 @@ func (a *Agent) listFilePathsInCwd() ([]string, error) {
 			return nil
 		}
 
+		if info.Size() == 0 {
+			a.logger.Debug("8: file is empty")
+			return nil
+		}
+
 		files = append(files, path)
 
 		return nil

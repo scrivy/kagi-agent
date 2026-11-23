@@ -74,13 +74,13 @@ func (c *Client) PostUpload(ctx context.Context, filePath string) (*models.PostU
 	c.logger.Debugf("%s %s response body:\n%s", method, path, body)
 
 	if resp.StatusCode != http.StatusOK {
-		return nil, errors.New(fmt.Sprintf("http status: %s, headers: %+v", resp.Status, resp.Header))
+		return nil, errors.New(fmt.Sprintf("http status: %s, headers: %+v, body: %s", resp.Status, resp.Header, body))
 	}
 
 	var output models.PostUploadResponse
 	err = json.Unmarshal(body, &output)
 	if err != nil {
-		return nil, fmt.Errorf("json.Unmarshal(): %w", err)
+		return nil, fmt.Errorf("json.Unmarshal(): %w, body: %s", err, body)
 	}
 
 	c.logger.Debugf("%s %s struct:\n%+v", method, path, output)
